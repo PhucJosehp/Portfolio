@@ -1,0 +1,32 @@
+.navbar {
+  margin: 50px 50px 0px 100px;
+
+  display: flex;
+  align-items: center;
+}
+
+.signature {
+  color: #488b8f;
+  font-family: Yellowtail;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+
+  cursor: default;
+}
+
+.navlink {
+  margin-left: 30px;
+  color: #488b8f;
+
+  font-family: "Noto Sans Kannada";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  &:hover {
+    color: #add2c9;
+  }
+}

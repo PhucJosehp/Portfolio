@@ -1,0 +1,46 @@
+.in4__img-contact {
+  height: 800px;
+}
+.fingerdown {
+  font-size: 96px;
+}
+
+.contact {
+  display: flex;
+  &__inf {
+    width: 480px;
+    height: 120px;
+    flex-shrink: 0;
+    background-color: #488b8f;
+    border-radius: 32px;
+    margin: 30px 15px;
+    padding: 15px;
+  }
+
+  &__icon {
+    font-size: 80px;
+  }
+
+  &__link {
+    color: #000000;
+  }
+}
+
+.phone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  color: #fff;
+  text-align: center;
+  font-family: "Noto Sans Kannada";
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}

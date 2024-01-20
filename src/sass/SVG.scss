@@ -1,0 +1,32 @@
+.svg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0px 5px;
+  .svg__img {
+    height: 50px;
+  }
+
+  &__text {
+    color: #092635;
+    text-align: center;
+    font-family: "Noto Sans Kannada";
+    font-size: 16px;
+    font-weight: 800;
+  }
+}
+
+.hidden {
+  display: none;
+  margin-bottom: 20px;
+}
+
+.svg:hover .hidden {
+  display: flex;
+  margin: -15px;
+  position: absolute;
+  z-index: 1;
+  font-weight: 700;
+  cursor: default;
+}

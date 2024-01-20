@@ -1,0 +1,59 @@
+.interst {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__name {
+    color: #000;
+    font-family: "Black Ops One";
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 50px 0px;
+  }
+  .interst--cover {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 1680px;
+  }
+  .interst--cover-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 1680px;
+  }
+  &__des {
+    color: #000;
+    text-align: center;
+    font-family: "Noto Sans Kannada";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 800px;
+  }
+  &__des1 {
+    color: #000;
+    text-align: center;
+    font-family: "Noto Sans Kannada";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 500px;
+  }
+  &__img {
+    width: 800px;
+    margin-top: 10px;
+  }
+
+  &__img2 {
+    height: 400px;
+    margin: 20px 0px;
+  }
+}

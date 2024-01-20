@@ -1,0 +1,98 @@
+.infor {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 50px;
+  &__name {
+    color: #1e1e1e;
+    font-family: "Noto Sans Kannada";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 10px;
+  }
+  &__JOB {
+    color: #000;
+    font-family: "Noto Sans Kannada";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 15px;
+  }
+
+  &__describe {
+    width: 732px;
+    height: 100px;
+    flex-shrink: 0;
+    color: #1e1e1e;
+
+    font-family: "Noto Sans Kannada";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+.img__self {
+  width: 690px;
+  height: 710px;
+  flex-shrink: 0;
+}
+
+.tech {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    color: #1e1e1e;
+    font-family: "Black Ops One";
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  &__skill {
+    display: flex;
+    align-items: center;
+
+    &__img {
+      width: 600px;
+    }
+
+    &__coverdata {
+      width: 1000px;
+      border-radius: 30px;
+      background: #1e1e1e;
+      padding: 20px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__name {
+      color: #fff3f3;
+      font-family: "Noto Sans Kannada";
+      font-size: 56px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    &__des {
+      width: 830px;
+
+      color: #fff3f3;
+      font-family: "Noto Sans Kannada";
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
+}
