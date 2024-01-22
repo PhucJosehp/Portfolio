@@ -33,3 +33,27 @@
     width: 700px;
   }
 }
+
+@media screen and (max-width: 1400px) {
+  .in4 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    &__inf4 {
+      &__name {
+        font-size: calc(20px + 3.2vw); //80 px
+      }
+
+      &__des {
+        margin-top: 10px;
+
+        font-size: calc(13px + 1.5vw); // 40px
+      }
+    }
+
+    &__img {
+      width: calc(200px + 33vw);
+    }
+  }
+}

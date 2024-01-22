@@ -6,18 +6,18 @@
   &__name {
     color: #000;
     font-family: "Black Ops One";
-    font-size: 80px;
+    font-size: calc(20px + 3.2vw);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin: 50px 0px;
+    margin: calc(12px + 2vw) 0px;
   }
   .interst--cover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    width: 1680px;
+    width: calc(340px + 75vw);
   }
   .interst--cover-reverse {
     display: flex;
@@ -25,35 +25,45 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    width: 1680px;
+    width: calc(340px + 75vw);
   }
   &__des {
     color: #000;
     text-align: center;
     font-family: "Noto Sans Kannada";
-    font-size: 40px;
+    font-size: calc(13px + 1.5vw);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    width: 800px;
+    width: calc(200px + 32vw);
   }
   &__des1 {
     color: #000;
     text-align: center;
     font-family: "Noto Sans Kannada";
-    font-size: 40px;
+    font-size: calc(13px + 1.5vw);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    width: 500px;
+    width: calc(200px + 32vw);
   }
   &__img {
-    width: 800px;
+    width: calc(200px + 32vw);
     margin-top: 10px;
   }
 
   &__img2 {
-    height: 400px;
+    height: calc(100px + 16vw);
     margin: 20px 0px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .interst {
+    .interst--cover,
+    .interst--cover-reverse {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

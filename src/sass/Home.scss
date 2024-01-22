@@ -2,11 +2,11 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-bottom: 50px;
+  margin-bottom: calc(11px + 3vw);
   &__name {
     color: #1e1e1e;
     font-family: "Noto Sans Kannada";
-    font-size: 48px;
+    font-size: calc(11px + 2.2vw);
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -15,30 +15,29 @@
   &__JOB {
     color: #000;
     font-family: "Noto Sans Kannada";
-    font-size: 24px;
-    font-style: normal;
+    font-size: calc(10px + 1.2vw);
     font-weight: 700;
-    line-height: normal;
     margin-bottom: 15px;
+    width: calc(252px + 25vw);
+    text-align: center;
   }
 
   &__describe {
-    width: 732px;
-    height: 100px;
+    width: calc(252px + 25vw);
     flex-shrink: 0;
     color: #1e1e1e;
 
     font-family: "Noto Sans Kannada";
-    font-size: 24px;
-    font-style: normal;
+    font-size: calc(10px + 1vw);
     font-weight: 400;
-    line-height: normal;
+    text-align: center;
   }
 }
 
 .img__self {
-  width: 690px;
-  height: 710px;
+  width: calc(124px + 30vw);
+  height: calc(144px + 30vw);
+  margin-bottom: 20px;
   flex-shrink: 0;
 }
 
@@ -50,7 +49,7 @@
   &__title {
     color: #1e1e1e;
     font-family: "Black Ops One";
-    font-size: 80px;
+    font-size: calc(30px + 5vw);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -60,11 +59,11 @@
     align-items: center;
 
     &__img {
-      width: 600px;
+      width: calc(120px + 25vw);
     }
 
     &__coverdata {
-      width: 1000px;
+      width: calc(212px + 40vw);
       border-radius: 30px;
       background: #1e1e1e;
       padding: 20px;
@@ -78,21 +77,42 @@
     &__name {
       color: #fff3f3;
       font-family: "Noto Sans Kannada";
-      font-size: 56px;
-      font-style: normal;
+      font-size: calc(26px + 2.5vw);
       font-weight: 700;
-      line-height: normal;
     }
 
     &__des {
-      width: 830px;
+      width: calc(42px + 40vw);
 
       color: #fff3f3;
       font-family: "Noto Sans Kannada";
-      font-size: 32px;
-      font-style: normal;
+      font-size: calc(13px + 1vw);
       font-weight: 700;
-      line-height: normal;
     }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .infor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+
+    margin: auto auto;
+
+    &__name {
+      font-size: calc(11px + 2.2vw);
+      margin-bottom: 10px;
+
+      width: calc(252px + 25vw);
+      text-align: center;
+    }
+  }
+
+  .tech__skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }

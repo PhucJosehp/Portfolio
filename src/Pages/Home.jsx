@@ -52,10 +52,13 @@ const techdata = [
 function In4() {
   const cardVariants = {
     offscreen: {
-      y: 500,
+      y: 300,
+      opacity: 0,
     },
     onscreen: {
       y: 0,
+      opacity: 1,
+
       transition: {
         type: "spring",
         bounce: 0.4,
@@ -93,10 +96,12 @@ function In4() {
 function TechSkill() {
   const moveLeft = {
     offscreen: {
-      x: -1000,
+      x: -120,
+      opacity: 0,
     },
     onscreen: {
       x: 0,
+      opacity: 1,
       transition: {
         type: "spring",
         bounce: 0.4,
@@ -107,10 +112,12 @@ function TechSkill() {
 
   const moveRight = {
     offscreen: {
-      x: 1000,
+      x: 120,
+      opacity: 0,
     },
     onscreen: {
       x: 0,
+      opacity: 1,
       transition: {
         type: "spring",
         bounce: 0.2,

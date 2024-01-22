@@ -1,5 +1,5 @@
 .navbar {
-  margin: 50px 50px 0px 100px;
+  margin: 2.6042vw 2.6042vw 0px 5.2083vw;
 
   display: flex;
   align-items: center;
@@ -8,25 +8,59 @@
 .signature {
   color: #488b8f;
   font-family: Yellowtail;
-  font-size: 64px;
-  font-style: normal;
+  font-size: calc(32px + 2vw);
   font-weight: 400;
-  line-height: normal;
   text-decoration-line: underline;
 
   cursor: default;
 }
 
 .navlink {
-  margin-left: 30px;
+  margin-left: 1.5vw;
   color: #488b8f;
 
   font-family: "Noto Sans Kannada";
-  font-size: 32px;
-  font-style: normal;
+  font-size: 1.725vw;
   font-weight: 400;
-  line-height: normal;
+  text-decoration: none;
+
   &:hover {
     color: #add2c9;
   }
+}
+
+.navlink-collapse {
+  margin-left: 3.5vw;
+  color: #488b8f;
+  font-family: "Noto Sans Kannada";
+  font-size: calc(12px + 0.5vw);
+  font-weight: 400;
+  text-decoration: none;
+  &:hover {
+    color: #add2c9;
+  }
+}
+
+button {
+  outline: none;
+  border: none;
+  // -webkit-user-select: none;
+  // -moz-user-select: none;
+  // -ms-user-select: none;
+  cursor: pointer;
+
+  width: calc(42px + 1vw);
+  height: calc(23px + 1vw);
+  border-radius: 50%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  top: 10%;
 }
