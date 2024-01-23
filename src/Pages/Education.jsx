@@ -3,7 +3,7 @@ import "../sass/Education.scss";
 import Navbar from "../components/Navbar";
 import In4 from "../components/In4";
 import Edu from "../assets/edu.png";
-import { PlusOutlined, MinusOutlined } from "@ant-design/icons";
+import { PlusOutlined } from "@ant-design/icons";
 import { Button } from "antd";
 import { FloatButton } from "antd";
 
@@ -48,27 +48,32 @@ function Card({ data }) {
   }
 
   return isOpen ? (
-    <div className="card--expand">
-      <img className="card--expand__img" src={data.img} alt="logo school" />
-      <MinusOutlined onClick={handleClick} className="close" />
-      <div className="card--expand__inf4">
-        <div className="card--expand__school">
-          <text className="card--expand__school__name">{data.school}</text>
-          <text className="card--expand__school__year">{data.time}</text>
+    <button onClick={handleClick} className="cardDegree--expand">
+      <img
+        className="cardDegree--expand__img"
+        src={data.img}
+        alt="logo school"
+      />
+      <div className="cardDegree--expand__inf4">
+        <div className="cardDegree--expand__school">
+          <text className="cardDegree--expand__school__name">
+            {data.school}
+          </text>
+          <text className="cardDegree--expand__school__year">{data.time}</text>
         </div>
-        <div className="card--expand__school__des">
+        <div className="cardDegree--expand__school__des">
           {data.des.map((D, idx) => (
-            <div className="card--expand__school__des__detail" key={idx}>
+            <div className="cardDegree--expand__school__des__detail" key={idx}>
               ✍{D.note}
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </button>
   ) : (
-    <Button onClick={handleClick} type="text" className="card">
-      <div className="card__text">{data.school}</div>
-      <PlusOutlined className="card__expand" />
+    <Button onClick={handleClick} type="text" className="cardDegree">
+      <div className="cardDegree__text">{data.school}</div>
+      <PlusOutlined className="cardDegree__expand" />
     </Button>
   );
 }
@@ -104,7 +109,8 @@ function Education() {
       <Navbar />
       <In4 data={dataIn4} />
       <Degree />
-      <Cirtificate /> <FloatButton.BackTop />
+      <Cirtificate />
+      <FloatButton.BackTop />
     </>
   );
 }

@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin: 0px calc(20px + 2vw);
   &__card {
     width: 500px;
     height: 250px;
@@ -52,7 +53,7 @@
 
 .btn-view-more {
   padding: 20px 20px 14px 20px;
-  width: 180px;
+  width: calc(1vw + 170px);
   flex-shrink: 0;
   border-radius: 30px;
   background: #488b8f;
@@ -60,7 +61,7 @@
   color: #000;
   text-align: center;
   font-family: "Noto Sans Kannada";
-  font-size: 24px;
+  font-size: calc(13px + 0.5vw);
   font-weight: 400;
 
   display: flex;

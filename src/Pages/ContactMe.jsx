@@ -76,7 +76,7 @@ function In4() {
               className="contact__link"
               href="https://www.tiktok.com/@dy9er3xi124k?_t=8jAOuyseoq2&_r=1"
             >
-              <img src={tiktok} alt="tiktok img" />
+              <img src={tiktok} alt="tiktok img" className="imgTikTok" />
             </a>
 
             <a

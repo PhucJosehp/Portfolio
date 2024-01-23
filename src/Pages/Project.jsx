@@ -38,9 +38,10 @@ function ProjectList({ data }) {
           whileInView="onscreen"
           viewport={{ once: true, amount: 0.8 }}
         >
-          <motion.NavLink
+          <motion.a
             variants={cardVariants}
-            to={D.git}
+            href={D.git}
+            target="blank"
             className="projectlist__card"
             key={idx}
           >
@@ -52,7 +53,7 @@ function ProjectList({ data }) {
                 <SVGImg data={LG} key={idx1} />
               ))}
             </div>
-          </motion.NavLink>
+          </motion.a>
         </motion.div>
       ))}
     </div>

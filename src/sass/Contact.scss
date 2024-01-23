@@ -1,15 +1,14 @@
 .in4__img-contact {
-  height: 800px;
+  height: calc(200px + 28vw);
 }
 .fingerdown {
-  font-size: 96px;
+  font-size: calc(28px + 4vw);
 }
 
 .contact {
   display: flex;
   &__inf {
-    width: 490px;
-    height: 120px;
+    width: calc(288px + 10vw);
     flex-shrink: 0;
     background-color: #488b8f;
     border-radius: 32px;
@@ -18,7 +17,7 @@
   }
 
   &__icon {
-    font-size: 80px;
+    font-size: calc(28px + 3vw);
   }
 
   &__link {
@@ -35,7 +34,7 @@
   color: #fff;
   text-align: center;
   font-family: "Noto Sans Kannada";
-  font-size: 32px;
+  font-size: calc(0.9vw + 13px);
   font-weight: 400;
 }
 
@@ -43,4 +42,17 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.imgTikTok {
+  width: calc(29px + 4vw);
+  margin: 0px -0.5vw;
+}
+
+@media screen and (max-width: 1400px) {
+  .contact {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
 }

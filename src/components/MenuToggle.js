@@ -20,7 +20,7 @@ export const MenuToggle = ({ toggle, children }) => (
     aria-controls="navbarToggleExternalContent"
     aria-expanded="false"
     aria-label="Toggle navigation"
-    className="navbar-toggler"
+    className="navbar-toggler btn-toggle"
     onClick={toggle}
   >
     <svg width="23vw" height="23vw">
