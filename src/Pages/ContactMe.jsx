@@ -16,9 +16,11 @@ function In4() {
   const Moveup = {
     offscreen: {
       y: 500,
+      opacity: 0,
     },
     onscreen: {
       y: 0,
+      opacity: 0,
       transition: {
         type: "spring",
         bounce: 0.4,

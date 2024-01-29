@@ -23,9 +23,9 @@ function Navbar() {
         JosephTran
       </Col>
 
-      <MenuToggle toggle={() => toggleOpen()}> </MenuToggle>
-      <MenuItem isOpen={isOpen} />
+      <MenuToggle toggle={() => toggleOpen()} />
 
+      <MenuItem isOpen={isOpen} />
       <Col span={12} offset={0} className="collapse navbar-collapse">
         <NavLink className="navlink" to="/">
           Home
