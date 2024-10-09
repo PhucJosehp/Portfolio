@@ -2,70 +2,111 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin: 0px calc(20px + 2vw);
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 50px;
   &__card {
-    width: 500px;
-    height: 250px;
-
-    border-radius: 10px;
-    background: #c4ded8;
-
+    width: 400px;
+    height: fit-content;
+    background: var(--gray);
     margin: 25px 0px;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
-
+    align-items: flex-start;
     text-decoration: none;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 32rem;
+
     &__name {
-      color: #000;
-      font-family: "Noto Sans Kannada";
-      font-size: 30px;
-      font-weight: 700;
-      margin: 30px;
+      color: var(--secondary);
+      font-size: clamp(12px, 12px + 1vw, 20px);
+      margin: 20px 0px;
+      color: #4ade80;
     }
 
     &__des {
+      display: flex;
+      gap: 6px;
       width: 384px;
-      text-align: center;
-      color: #000;
-      font-family: "Noto Sans Kannada";
-      font-size: 20px;
+      text-align: left;
+      color: var(--secondary);
+      font-size: clamp(12px, 10px + 1vw, 16px);
       font-weight: 400;
-
-      margin-top: -15px;
     }
 
     &__date {
-      color: rgba(0, 0, 0, 0.5);
-      font-family: "Noto Sans Kannada";
+      color: var(--secondary);
       font-size: 16px;
       font-weight: 400;
-      margin-top: 10px;
+      display: flex;
+      gap: 6px;
     }
 
     &__icon {
-      margin-top: 10px;
       display: flex;
     }
   }
 }
-
-.btn-view-more {
-  padding: 20px 20px 14px 20px;
-  width: calc(1vw + 170px);
-  flex-shrink: 0;
-  border-radius: 30px;
-  background: #488b8f;
-
-  color: #000;
-  text-align: center;
-  font-family: "Noto Sans Kannada";
-  font-size: calc(13px + 0.5vw);
-  font-weight: 400;
-
+.projects {
+  background-color: var(--secondary);
+  min-height: fit-content;
+  width: 100%;
+  padding-bottom: 0 50px 50px 50px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 
-  margin: auto auto;
+  &__title {
+    font-family: "Press Start 2P";
+    font-size: calc(20px + 1.3vw);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 2.4vw;
+    margin-bottom: 4px;
+  }
+
+  &__dot {
+    width: 5vw;
+    min-width: 50px;
+    max-width: 70px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--primary);
+    margin: auto;
+  }
+}
+
+.circle-cover {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.circle-deco {
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+}
+.text-project {
+  color: #4ade80;
+}
+
+.circle-red {
+  background-color: #ef4444;
+}
+
+.circle-yellow {
+  background-color: #f59e0b;
+}
+
+.circle-green {
+  background-color: #10b981;
 }

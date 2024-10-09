@@ -1,49 +1,68 @@
 import "../sass/Navbar.scss";
-import { NavLink } from "react-router-dom";
+import React from "react";
 import { Col } from "antd";
 import { MenuToggle } from "./MenuToggle";
-import { motion, useCycle } from "framer-motion";
-import { useRef } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-
+import { useCycle } from "framer-motion";
 import MenuItem from "./MenuItem";
 
-function Navbar() {
+function Navbar({
+  homeRef,
+  interestRef,
+  educationRef,
+  projectsRef,
+  contactMeRef,
+}) {
   const [isOpen, toggleOpen] = useCycle(false, true);
-  const containerRef = useRef(null);
+
+  // Function to scroll to the section based on the ref passed
+  function handleNavbarClick(ref) {
+    const offset = 100; // Define the offset in pixels
+    const element = ref.current;
+
+    if (element) {
+      const elementPosition =
+        element.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: elementPosition - offset,
+        behavior: "smooth",
+      });
+    }
+  }
 
   return (
-    <motion.div
-      animate={isOpen ? "open" : "closed"}
-      initial={false}
-      ref={containerRef}
-      className="navbar navbar-expand-md"
-    >
+    <navbar className="navbarCustom navbar-expand-md">
       <Col span={12} offset={0} className="signature">
         JosephTran
       </Col>
 
       <MenuToggle toggle={() => toggleOpen()} />
-
       <MenuItem isOpen={isOpen} />
+
       <Col span={12} offset={0} className="collapse navbar-collapse">
-        <NavLink className="navlink" to="/">
+        {/* Link the navbar items to the corresponding refs */}
+        <div onClick={() => handleNavbarClick(homeRef)} className="navlink">
           Home
-        </NavLink>
-        <NavLink className="navlink" to="/interest">
-          Interest
-        </NavLink>
-        <NavLink className="navlink" to="/education">
+        </div>
+        <div onClick={() => handleNavbarClick(interestRef)} className="navlink">
+          About Me
+        </div>
+        <div
+          onClick={() => handleNavbarClick(educationRef)}
+          className="navlink"
+        >
           Education
-        </NavLink>
-        <NavLink className="navlink" to="/projects">
+        </div>
+        <div onClick={() => handleNavbarClick(projectsRef)} className="navlink">
           Projects
-        </NavLink>
-        <NavLink className="navlink" to="/contact">
+        </div>
+        <div
+          onClick={() => handleNavbarClick(contactMeRef)}
+          className="navlink"
+        >
           Contact Me
-        </NavLink>
+        </div>
       </Col>
-    </motion.div>
+    </navbar>
   );
 }
 

@@ -1,148 +1,113 @@
-.cirti {
-  &__img-cover {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  &__img {
-    width: calc(316px + 20vw);
-    margin: 0px calc(12px + 2vw);
-  }
+.education {
+  background-color: var(--primary);
+  min-height: fit-content;
+  width: 100%;
+  padding-bottom: 50px;
   &__title {
-    margin-left: 100px;
-    color: #1e1e1e;
-    font-family: "Black Ops One";
-    font-size: calc(20px + 2vw);
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-}
-
-.degree {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.cardDegree {
-  width: calc(68px + 60vw);
-  height: 110px;
-
-  border: 1px solid black;
-  border-radius: 32px;
-  margin: calc(11px + 1vw) calc(8px + 9vw);
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  cursor: pointer;
-  &__text {
-    color: #000;
-    font-family: "Noto Sans Kannada";
-    font-size: calc(13px + 1.5vw);
-    font-weight: 700;
-    margin-left: calc(1vw);
-    margin-top: calc(12px + 0.5vw);
-  }
-
-  &__expand {
-    font-size: calc(13px + 1.5vw);
-    color: #000;
-    margin-right: calc(13px + 1.5vw);
-  }
-}
-
-.cardDegree--expand {
-  width: calc(68px + 60vw);
-  height: 500px;
-  padding: calc(3vw + 12px);
-  border: 1px solid black;
-  border-radius: 32px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  margin: 20px 0px;
-
-  &__inf4 {
-    width: calc(32px + 40vw);
-
-    border-radius: 32px;
-    background: #5ea3a3;
-  }
-
-  &__school {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    font-family: "Press Start 2P";
+    font-size: calc(20px + 1.3vw);
     width: 100%;
-    height: calc(54px + 5vw);
-    background: #add2c9;
-    border-radius: 32px;
-
-    &__name {
-      color: #000;
-      font-family: "Noto Sans Kannada";
-      font-size: calc(13px + 1.5vw);
-      font-weight: 700;
-    }
-
-    &__year {
-      color: #000;
-      font-family: "Noto Sans Kannada";
-      font-size: calc(6px + 1vw);
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-    }
-    &__des {
-      margin: calc(12px + 2vw) 0px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-
-      &__detail {
-        width: calc(120px + 25vw);
-        color: #000;
-        font-family: "Noto Sans Kannada";
-        font-size: calc(10px + 1vw);
-        font-weight: 700;
-      }
-    }
-  }
-
-  &__img {
-    width: calc(112px + 15vw);
-    height: calc(112px + 15vw);
-    margin: 20px;
-  }
-}
-
-.close {
-  font-size: calc(13px + 1.5vw);
-  color: #000;
-  position: relative;
-}
-
-@media screen and (max-width: 1400px) {
-  .cardDegree--expand {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    padding-top: 2.4vw;
+    margin-bottom: 4px;
+    color: var(--secondary);
   }
 
-  .cirti {
-    &__img-cover {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
+  &__dot {
+    width: 5vw;
+    min-width: 50px;
+    max-width: 70px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--secondary);
+    margin: auto;
   }
+
+  &__description {
+    font-size: calc(16px + 0.2vw);
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 8px;
+    text-align: center;
+    text-wrap: stable;
+    margin-bottom: 30px;
+    color: var(--secondary);
+  }
+
+  &__detail {
+    display: flex;
+    gap: 100px;
+    padding: 8px 100px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.edu-card {
+  position: relative;
+  min-width: 300px;
+  min-height: 200px;
+  flex-basis: 300px;
+  flex-shrink: 0;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.edu-card img {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-shrink: 0;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.edu-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.edu-card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.edu-card:hover .edu-card__content {
+  transform: rotateX(0deg);
+}
+
+.edu-card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.edu-card:hover img {
+  scale: 0;
+}
+
+.edu-card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1;
 }

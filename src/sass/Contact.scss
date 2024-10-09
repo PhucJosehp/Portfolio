@@ -1,58 +1,160 @@
-.in4__img-contact {
-  height: calc(200px + 28vw);
-}
-.fingerdown {
-  font-size: calc(28px + 4vw);
-}
-
 .contact {
-  display: flex;
-  &__inf {
-    width: calc(288px + 10vw);
-    flex-shrink: 0;
-    background-color: #488b8f;
-    border-radius: 32px;
-    margin: 30px 15px;
-    padding: 15px;
+  background-color: var(--primary);
+  min-height: fit-content;
+  width: 100%;
+  padding-bottom: 50px;
+
+  &__title {
+    font-family: "Press Start 2P";
+    font-size: calc(20px + 1.3vw);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 2.4vw;
+    margin-bottom: 4px;
+    color: var(--secondary);
   }
 
-  &__icon {
-    font-size: calc(28px + 3vw);
+  &__dot {
+    width: 5vw;
+    min-width: 50px;
+    max-width: 70px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--secondary);
+    margin: auto;
   }
 
-  &__link {
-    color: #000000;
+  &__description {
+    font-size: calc(16px + 0.2vw);
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 8px;
+    text-align: center;
+    text-wrap: stable;
+    margin-bottom: 30px;
+    color: var(--secondary);
   }
+  &__detail {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary);
+    gap: 20px;
+  }
+}
+
+/* From Uiverse.io by Pradeepsaranbishnoi */
+.email {
+  --bg-color: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  --bg-color-light: white;
+  --text-color-hover: black;
+  --box-shadow-color: rgba(247, 245, 237, 0.48);
 }
 
 .phone {
+  --bg-color: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+  --bg-color-light: white;
+  --text-color-hover: black;
+  --box-shadow-color: rgba(247, 245, 237, 0.48);
+}
+
+.contact-card {
+  width: 220px;
+  height: 321px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-
-  color: #fff;
-  text-align: center;
-  font-family: "Noto Sans Kannada";
-  font-size: calc(0.9vw + 13px);
-  font-weight: 400;
-}
-
-.social {
-  display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  position: relative;
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease-out;
+  text-decoration: none;
 }
 
-.imgTikTok {
-  width: calc(29px + 4vw);
-  margin: 0px -0.5vw;
+.contact-card:hover {
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+  box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
+    0 24px 46px var(--box-shadow-color);
 }
 
-@media screen and (max-width: 1400px) {
-  .contact {
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-  }
+.contact-card:hover .overlay {
+  transform: scale(4) translateZ(0);
+}
+
+.contact-card:hover .circle {
+  border-color: var(--bg-color-light);
+  background: var(--bg-color);
+}
+
+.contact-card:hover .circle:after {
+  background: var(--bg-color-light);
+}
+
+.contact-card:hover p {
+  color: var(--text-color-hover);
+  font-weight: 700;
+}
+
+.contact-card p {
+  font-size: 17px;
+  color: #4c5656;
+  margin-top: 30px;
+  z-index: 1000;
+  transition: color 0.3s ease-out;
+}
+
+.circle {
+  width: 131px;
+  height: 131px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease-out;
+}
+
+.circle:after {
+  content: "";
+  width: 118px;
+  height: 118px;
+  display: block;
+  position: absolute;
+  background: var(--bg-color);
+  border-radius: 50%;
+  top: 7px;
+  left: 7px;
+  transition: opacity 0.3s ease-out;
+}
+
+.circle svg {
+  z-index: 10000;
+  transform: translateZ(0);
+}
+
+.overlay {
+  width: 118px;
+  position: absolute;
+  height: 118px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  top: 70px;
+  left: 50px;
+  z-index: 0;
+  transition: transform 0.3s ease-out;
+}
+
+.contact-logo {
+  width: 80px;
+  height: 80px;
+  z-index: 2;
 }
