@@ -15,9 +15,9 @@ const data = [
     role: "Front-end",
     Date: "SEP-2024",
     langue: [
-      { link: Tailwind, name: "Tailwind CSS" },
       { link: JS, name: "JS" },
       { link: ReactJS, name: "React" },
+      { link: Tailwind, name: "Tailwind CSS" },
       { link: HTML, name: "HTML" },
     ],
     git: "https://github.com/PhucJosehp/Hachiko-Store",

@@ -44,13 +44,15 @@ function ProjectList({ data }) {
 
             <div className="projectlist__card__name">$ {D.name}</div>
             <div className="projectlist__card__des">
-              <p className="text-project">Description:</p> {D.des}
+              <p className="text-project">Description:</p>
+              <p>{D.des}</p>
             </div>
             <div className="projectlist__card__des">
-              <p className="text-project">Role:</p> {D.role}
+              <p className="text-project">Role:</p> <p>{D.role}</p>
             </div>
             <div className="projectlist__card__date">
-              <p className="text-project">Date:</p>"{D.Date}"
+              <p className="text-project">Date:</p>
+              <p>{D.Date}</p>
             </div>
             <div className="projectlist__card__icon">
               {D.langue.map((LG, idx1) => (
