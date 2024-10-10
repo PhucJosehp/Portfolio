@@ -1,26 +1,31 @@
 .navbarCustom {
   display: flex;
-  
+  align-items: center;
+  justify-content: space-around;
   background-color: #e9e6e6;
   position: sticky;
   top: 0;
   width: 100%; /* Ensure it spans the full width */
   z-index: 1000; /* Ensure it stays on top of other elements */
-  padding: 10px;
+  padding: 10px 0px;
 }
 
 .signature {
   color: #31353b;
   font-family: "Press Start 2P";
-  font-size: calc(28px + 0.5vw);
+  font-size: clamp(14px, 8px + 2.5vw, 28px);
   font-weight: 400;
   text-decoration-line: underline;
   cursor: default;
   padding: 10px;
 }
 
+.navbar__tabs {
+  display: flex;
+  gap: 40px;
+}
+
 .navlink {
-  margin-left: 1.5vw;
   color: #31353b;
   font-family: "Press Start 2P";
   font-size: 1vw;
@@ -50,6 +55,7 @@
   border: none;
 
   cursor: pointer;
+  background-color: #e9e6e6;
 
   width: calc(42px + 1vw);
   height: calc(23px + 1vw);
@@ -63,4 +69,85 @@ a {
 .menu {
   display: flex;
   flex-wrap: wrap;
+}
+
+#checkbox {
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  width: 30px;
+  cursor: pointer;
+  margin: auto;
+  display: block;
+  height: calc(4px * 3 + 11px * 2);
+}
+
+.bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: calc(4px / 2);
+  background: var(--primary);
+  color: inherit;
+  opacity: 1;
+  transition: none 0.35s cubic-bezier(0.5, -0.35, 0.35, 1.5) 0s;
+}
+
+/***** Spin Animation *****/
+
+.bar--top {
+  bottom: calc(50% + 12px / 2);
+  transition-property: bottom, transform;
+  transition-delay: calc(0s + 0.35s), 0s;
+}
+
+.bar--middle {
+  top: calc(50% - 4px / 2);
+  transition-property: opacity;
+  transition-delay: calc(0s + 0.35s);
+}
+
+.bar--bottom {
+  top: calc(50% + 11px / 2);
+  transition-property: top, transform;
+  transition-delay: calc(0s + 0.35s), 0s;
+}
+
+#checkbox:checked + .toggle .bar--top {
+  bottom: calc(50% - 4px / 2);
+  transform: rotate(135deg);
+  transition-delay: 0s, calc(0s + 0.35s);
+}
+
+#checkbox:checked + .toggle .bar--middle {
+  opacity: 0;
+  transition-duration: 0s;
+  transition-delay: calc(0s + 0.35s);
+}
+
+#checkbox:checked + .toggle .bar--bottom {
+  top: calc(50% - 4px / 2);
+  transform: rotate(225deg);
+  transition-delay: 0s, calc(0s + 0.35s);
+}
+
+.menu-item-toggle {
+  background-color: var(--gray);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px;
+  position: absolute;
+  border-radius: 10px;
+  right: 10%;
+  top: 100%;
+}
+
+.menu-items {
+  font-family: "Noto Sans Kannada";
+  color: var(--secondary);
+  cursor: pointer;
 }

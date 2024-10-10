@@ -9,7 +9,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-top: 2.4vw;
+    padding-top: 50px;
     margin-bottom: 4px;
   }
 
@@ -20,12 +20,12 @@
     height: 10px;
     border-radius: 5px;
     background-color: var(--primary);
-    margin: auto;
+    margin: 20px auto;
   }
 
   &__description {
     font-size: calc(16px + 0.2vw);
-    width: 100%;
+    width: 90%;
     max-width: 900px;
     margin: auto;
     padding: 8px;
@@ -63,7 +63,8 @@
     }
 
     &__title {
-      font-size: 24px;
+      font-size: clamp(16px, 10px + 1.5vw, 24px);
+
       font-weight: 900;
       color: #000;
       text-transform: uppercase;
@@ -90,7 +91,7 @@
     }
 
     &__description {
-      font-size: calc(16px + 0.2vw);
+      font-size: clamp(10px, 8px + 1.5vw, 20px);
       font-weight: normal;
       text-wrap: stable;
     }

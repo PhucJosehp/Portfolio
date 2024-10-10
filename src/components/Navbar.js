@@ -1,6 +1,5 @@
 import "../sass/Navbar.scss";
-import React from "react";
-import { Col } from "antd";
+import React, { useState, useEffect } from "react";
 import { MenuToggle } from "./MenuToggle";
 import { useCycle } from "framer-motion";
 import MenuItem from "./MenuItem";
@@ -13,6 +12,30 @@ function Navbar({
   contactMeRef,
 }) {
   const [isOpen, toggleOpen] = useCycle(false, true);
+  const [isMobile, setIsMobile] = useState(window.innerWidth > 960);
+
+  const navbarTabs = [
+    {
+      name: "Home",
+      ref: homeRef,
+    },
+    {
+      name: "About Me",
+      ref: interestRef,
+    },
+    {
+      name: "Education",
+      ref: educationRef,
+    },
+    {
+      name: "Projects",
+      ref: projectsRef,
+    },
+    {
+      name: "Contact Me",
+      ref: contactMeRef,
+    },
+  ];
 
   // Function to scroll to the section based on the ref passed
   function handleNavbarClick(ref) {
@@ -29,39 +52,44 @@ function Navbar({
     }
   }
 
+  useEffect(() => {
+    // Function to handle screen resize
+    const handleResize = () => {
+      setIsMobile(window.innerWidth > 960);
+    };
+
+    // Add event listener for resize
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener when the component is unmounted
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <navbar className="navbarCustom navbar-expand-md">
-      <Col span={12} offset={0} className="signature">
-        JosephTran
-      </Col>
+      <div className="signature">JosephTran</div>
 
-      <MenuToggle toggle={() => toggleOpen()} />
-      <MenuItem isOpen={isOpen} />
+      <MenuToggle toggle={() => toggleOpen()} isOpen={!isMobile} />
+      <MenuItem
+        isOpen={isOpen}
+        tabs={navbarTabs}
+        handleNavbarClick={handleNavbarClick}
+      />
 
-      <Col span={12} offset={0} className="collapse navbar-collapse">
-        {/* Link the navbar items to the corresponding refs */}
-        <div onClick={() => handleNavbarClick(homeRef)} className="navlink">
-          Home
+      {isMobile && (
+        <div className="navbar__tabs">
+          {navbarTabs.map((item) => (
+            <div
+              onClick={() => handleNavbarClick(item.ref)}
+              className="navlink"
+            >
+              {item.name}
+            </div>
+          ))}
         </div>
-        <div onClick={() => handleNavbarClick(interestRef)} className="navlink">
-          About Me
-        </div>
-        <div
-          onClick={() => handleNavbarClick(educationRef)}
-          className="navlink"
-        >
-          Education
-        </div>
-        <div onClick={() => handleNavbarClick(projectsRef)} className="navlink">
-          Projects
-        </div>
-        <div
-          onClick={() => handleNavbarClick(contactMeRef)}
-          className="navlink"
-        >
-          Contact Me
-        </div>
-      </Col>
+      )}
     </navbar>
   );
 }

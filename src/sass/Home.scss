@@ -52,61 +52,10 @@
 }
 
 .img__self {
-  width: calc(124px + 30vw);
-  height: calc(144px + 30vw);
+  width: calc(100px + 30vw);
+  height: calc(100px + 30vw);
   margin-bottom: 20px;
   flex-shrink: 0;
-}
-
-.tech {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  &__title {
-    color: #1e1e1e;
-    font-family: "Black Ops One";
-    font-size: calc(30px + 5vw);
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-  &__skill {
-    display: flex;
-    align-items: center;
-
-    &__img {
-      width: calc(120px + 25vw);
-    }
-
-    &__coverdata {
-      width: calc(212px + 40vw);
-      border-radius: 30px;
-      background: #1e1e1e;
-      padding: 20px;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    &__name {
-      color: #fff3f3;
-      font-family: "Noto Sans Kannada";
-      font-size: calc(26px + 2.5vw);
-      font-weight: 700;
-    }
-
-    &__des {
-      width: calc(42px + 40vw);
-
-      color: #fff3f3;
-      font-family: "Noto Sans Kannada";
-      font-size: calc(13px + 1vw);
-      font-weight: 700;
-    }
-  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -135,7 +84,7 @@
 }
 
 .cover {
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 // animation
