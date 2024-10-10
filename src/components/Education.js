@@ -41,7 +41,7 @@ export default function Education() {
       ],
     },
     {
-      title: "TOEIC cirtificate",
+      title: "TOEIC certificate",
       logo: EN,
       description: [
         "Reading and listening: 770 / 990",
